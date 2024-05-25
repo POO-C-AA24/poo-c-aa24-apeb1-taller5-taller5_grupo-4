@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 import java.util.List;
-class CarritoDeCompras {
-    public List<Prob1_Producto> productos;
+class Problema_1_CarritoDeCompra {
+    public List<Problema_1_Producto> productos;
     public List<Integer> cantidades;
     public double total;
-    public CarritoDeCompras() {
+    public Problema_1_CarritoDeCompra() {
         productos = new ArrayList<>();
         cantidades = new ArrayList<>();
         total = 0;
     }
-    public void agregarProducto(List<Prob1_Producto> tienda, String nombreProducto, int cantidad) {
-        for (Prob1_Producto producto : tienda) {
+    public void agregarProducto(List<Problema_1_Producto> tienda, String nombreProducto, int cantidad) {
+        for (Problema_1_Producto producto : tienda) {
             if (producto.getNombre().equals(nombreProducto)) {
                 if (producto.getCantidad() >= cantidad) {
                     productos.add(producto);
@@ -37,7 +37,7 @@ class CarritoDeCompras {
             totalCompra *= (1 - descuento / 100);
         }
         if (montoPagado >= totalCompra) {
-            System.out.println("Pago realizado con éxito. ¡Gracias por su compra!");
+            System.out.println("Pago realizado con exito. Gracias por su compra!");
             for (int i = 0; i < productos.size(); i++) {
                 productos.get(i).reducirCantidad(cantidades.get(i));
             }
@@ -49,11 +49,11 @@ class CarritoDeCompras {
     }
     public void mostrarDetalleCompra() {
         if (productos.isEmpty()) {
-            System.out.println("El carrito está vacío.");
+            System.out.println("El carrito esta vacio.");
         } else {
             System.out.println("Detalle de la compra:");
             for (int i = 0; i < productos.size(); i++) {
-                Prob1_Producto producto = productos.get(i);
+                Problema_1_Producto producto = productos.get(i);
                 int cantidad = cantidades.get(i);
                 System.out.println(producto.getNombre() + ": " + cantidad + " unidades, Precio unitario: $" + String.format("%.2f", producto.getPrecio()));
             }

@@ -1,9 +1,9 @@
-class Prob1_Producto {
+class Problema_1_Producto {
     private String nombre;
     private double precio;
     private int cantidad;
 
-    public Prob1_Producto(String nombre, double precio, int cantidad) {
+    public Problema_1_Producto(String nombre, double precio, int cantidad) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;

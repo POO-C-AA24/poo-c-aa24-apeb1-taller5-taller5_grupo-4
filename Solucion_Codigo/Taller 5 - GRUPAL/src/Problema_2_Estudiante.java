@@ -1,13 +1,13 @@
-public class Prob2_Estudiante {
+public class Problema_2_Estudiante {
     public String nombre;
     public int edad;
-    public Prob2_Materia materia;
-    public Prob2_Estudiante(String nombre, int edad) {
+    public Problema_2_Materia materia;
+    public Problema_2_Estudiante(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
         this.materia = null;
     }
-    public void agregarMateria(Prob2_Materia materia) {
+    public void agregarMateria(Problema_2_Materia materia) {
         this.materia = materia;
     }
     public void verificarAprobacion() {
@@ -18,7 +18,7 @@ public class Prob2_Estudiante {
             } else {
                 System.out.println("El estudiante " + nombre + " no ha aprobado la materia " + materia.getNombre() + ".");
                 double puntosRecuperacionNecesarios = (7 - totalPuntos) / 0.4;
-                System.out.println("Deberá rendir un examen de recuperación sobre " + String.format("%.2f", puntosRecuperacionNecesarios) + " puntos.");
+                System.out.println("Debera rendir un examen de recuperacion sobre " + String.format("%.2f", puntosRecuperacionNecesarios) + " puntos.");
             }
         } else {
             System.out.println("El estudiante " + nombre + " no tiene materia asignada.");
